@@ -71,9 +71,9 @@ class ProductsController extends Controller
             'price' => ['required', 'numeric']
         ]);
 
-        dd($product);
+        // dd($product);
         $product->update($validated);
-        dd($product);
+        // dd($product);
 
         return redirect()->route('products.index')->with('success', 'Product ' . $product->id . ' updated');        
     }
